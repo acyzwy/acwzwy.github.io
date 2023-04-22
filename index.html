@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>王者荣耀 英雄介绍 攻略</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      font-size: 28px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    input[type="text"] {
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-right: 10px;
+      padding: 10px;
+      width: 100%;
+      max-width: 300px;
+    }
+    button {
+      background-color: #008CBA;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 10px 20px;
+    }
+    button:hover {
+      background-color: #005F6B;
+    }
+    #result {
+      margin-top: 20px;
+      padding: 20px;
+      word-wrap: break-word;
+    }
+    #result a {
+      color: #008CBA;
+      text-decoration: underline;
+    }
+    #result a:hover {
+      color: #005F6B;
+      text-decoration: none;
+    }
+    @media screen and (min-width: 768px) {
+      input[type="text"] {
+        width: 300px;
+      }
+      #container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      #form {
+        margin-right: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="form">
+      <h1>王者荣耀英雄介绍及攻略</h1>
+      <div>
+        <input type="text" id="input-msg" placeholder="请输入英雄名">
+        <button id="btn-submit" onclick="submit()">搜索</button>
+      </div>
+    </div>
+    <div id="result"></div>
+  </div>
+  <script>
+    function submit() {
+      let msg = document.getElementById("input-msg").value; // 获取输入框的值
+      let url = "https://zj.v.api.aa1.cn/api/wz/?msg=" + msg; // 拼接API链接
+      let xhr = new XMLHttpRequest(); // 创建XMLHttpRequest对象
+      xhr.open("GET", url, true); // 使用GET方法请求API链接
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) { // 当请求完成后
+          if (xhr.status === 200) { // 如果请求成功
+            let response = xhr.responseText; // 获取API返回的信息
+            let resultEl = document.getElementById("result");
+            resultEl.innerHTML = response; // 将获取到的信息展示在页面下面
+            let links = resultEl.getElementsByTagName("a");
+            for (let i = 0; i < links.length; i++) {
+              links[i].setAttribute("target", "_blank"); // 设置链接的目标，让链接在新标签页中打开
+            }
+          } else {
+            alert("请求失败，错误码：" + xhr.status); // 如果请求失败，弹出提示框
+          }
+        }
+      }
+      xhr.send(); // 发送请求
+    }
+  </script>
+</body>
