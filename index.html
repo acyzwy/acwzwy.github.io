@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" href="https://github.githubassets.com/pinned-octocat.svg">
-	<title>宇宙无垠の网站库</title>
-	<style>
+<!doctype html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="/se/static/img/iphone/favicon64.ico">
+        <title>宇宙无垠の网站库</title>
+        <style>
 		body {
 			font-family: Arial, sans-serif;
 			background-color: #f2f2f2;
@@ -61,40 +62,92 @@
 				height: auto;
 			}
 		}
+		/* 底部 */
+		.footer {
+			background-color: #f2f2f2;
+			border-top: 1px solid #ccc;
+			padding: 10px;
+			text-align: center;
+			font-size: 16px;
+			color: #666;
+			margin-top: 50px;
+		}
+		/* 头部 */
+		header {
+			background-color: #fff;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 1;
+		}
 	</style>
-</head>
-<body>
-	<div class="container">
-		<div class="box" onclick="window.location.href='https://acyzwy.github.io/index.html/wzry.html'">
-			<img src="https://pvp.qq.com/favicon.ico" alt="">
-			<h1>王者荣耀英雄攻略</h1>
-			<p>王者荣耀英雄的攻略，api资源，可能有误</p>
-		</div>
-		<div class="box" onclick="window.location.href='https://acyzwy.github.io/index.html/2048.html'">
-			<img src="https://2048game.com/favicon.ico" alt="">
-			<h1>2048</h1>
-			<p>2048小游戏</p>
-		</div>
-		<div class="box" onclick="window.location.href='http://www.1000mines.com/'">
-			<img src="http://www.1000mines.com/ext-data/f32.png" alt="">
-			<h1>无限扫雷</h1>
-			<p>无限扫雷，摸鱼必备</p>
-		</div>
-		<div class="box" onclick="window.location.href='https://2020game.io/'">
-			<img src="https://2020game.io/logo/favicon.ico" alt="">
-			<h1>2020 game</h1>
-			<p>一个回顾2020年的小游戏</p>
-		</div>
-		<div class="box" onclick="window.location.href='https://kiomet.com'">
-			<img src="https://img.ywyj.cn/fcf97320-30f6-4f5e-96bd-ae43a7b475ef" alt="">
-			<h1>Kiomet</h1>
-			<p>一款实时战略游戏，可以通过占领塔来扩张领土</p>
-		</div>
-		<div class="box" onclick="window.location.href='https://cf.phicommunity.com.cn'">
-			<img src="https://img0.baidu.com/it/u=1353296566,3167947781&fm=253" alt="">
-			<h1>Phicommunity</h1>
-			<p>一个具有phigros玩法的网页无广告音游</p>
-		</div>
-	</div>
-</body>
+    </head>
+    <body>
+        <header>
+            <a href="https://acyzwy.github.io/index.html/" style="font-size: 24px;font-weight: bold;text-decoration: none;background-image: linear-gradient(90deg,#ff0000 0,#02A7DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;">宇宙无垠</a>
+        </header>
+        <div class="container">
+            <h2 id="tool">工具</h2>
+            <div class="box" onclick="window.open('https://acyzwy.github.io/index.html/wzry.html', '_blank')">
+                <img src="https://pvp.qq.com/favicon.ico" alt="">
+                <h1>王者荣耀英雄攻略</h1>
+                <p>王者荣耀英雄的攻略，api资源，可能有误</p><p style="color:red">出现问题</p>
+            </div>
+            <div class="box" onclick="window.open('https://www.arealme.com/cn', '_blank')">
+                <img src="https://www.arealme.com/fav.ico" alt="">
+                <h1>A Real Me</h1>
+                <p>有趣的多元化测试</p>
+            </div>
+            <h2 id="game">游戏</h2>
+            <div class="box" onclick="window.open('https://acyzwy.github.io/index.html/2048.html', '_blank')">
+                <img src="https://2048game.com/favicon.ico" alt="">
+                <h1>2048</h1>
+                <p>2048小游戏</p>
+            </div>
+            <div class="box" onclick="window.open('http://www.1000mines.com/', '_blank')">
+                <img src="http://www.1000mines.com/ext-data/f32.png" alt="">
+                <h1>无限扫雷</h1>
+                <p>无限扫雷，摸鱼必备</p>
+            </div>
+            <div class="box" onclick="window.open('https://2020game.io/', '_blank')">
+                <img src="https://2020game.io/logo/favicon.ico" alt="">
+                <h1>2020 game</h1>
+                <p>一个回顾2020年的小游戏</p>
+            </div>
+            <div class="box" onclick="window.open('https://kiomet.com', '_blank')">
+                <img src="https://img.ywyj.cn/fcf97320-30f6-4f5e-96bd-ae43a7b475ef" alt="">
+                <h1>Kiomet</h1>
+                <p>一款实时战略游戏，可以通过占领塔来扩张领土</p>
+            </div>
+            <div class="box" onclick="window.open('https://cf.phicommunity.com.cn', '_blank')">
+                <img src="https://img0.baidu.com/it/u=1353296566,3167947781&amp;fm=253" alt="">
+                <h1>Phicommunity</h1>
+                <p>一个具有phigros玩法的网页无广告音游</p>
+            </div>
+        </div>
+        <div class="footer" id="hitokoto"></div>
+        <p style="text-align: center;">本站已稳定运行了 <script type="text/javascript">
+var webstar= new Date("4/29/2023");
+var webnow = new Date();
+var dotime = webnow.getTime() - webstar.getTime();
+var donow = Math.floor(dotime / (1000 * 60 * 60 * 24));
+document.write(+donow)
+</script> 天</p><!--<br><span style="font-size:5px;">v2.0</span>-->
+        <script>
+		// 使用 fetch 获取随机话语
+		fetch('https://v1.hitokoto.cn/')
+			.then(response => response.json())
+			.then(data => {
+				const hitokoto = document.getElementById('hitokoto');
+				hitokoto.innerHTML = data.hitokoto + ' ——《' + data.from + '》';
+			})
+			.catch(error => {
+				console.error(error);
+			});
+	</script>
+    </body>
 </html>
