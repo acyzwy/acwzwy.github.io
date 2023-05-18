@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0;">
+<title>宇宙无垠丨Error</title>
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+<p>404 - ERROR</p>
+<p>页面走丢了！ Page not found！</p>
+<p id="countdown"></p>
+<script>
+    // 设置倒计时时长
+    var countDownDuration = 5000;
+    // 获取当前时间
+    var startTime = new Date().getTime();
+    // 计算倒计时结束时间
+    var countDownEndTime = startTime + countDownDuration;
+    // 每秒更新倒计时
+    function startCountdown() {
+        var x = setInterval(function() {
+            // 获取当前时间
+            var now = new Date().getTime();
+            // 计算距离倒计时结束时间还有多少毫秒
+            var distance = countDownEndTime - now;
+            // 将毫秒转换为秒
+            var seconds = Math.floor(distance / 1000);
+            // 将倒计时显示在页面上
+            document.getElementById("countdown").innerHTML = "将在" + seconds + "秒后跳转到主页";
+            // 如果倒计时结束，则跳转主页
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "正在跳转…";
+                window.location.href = "index.html";
+            }
+        }, 1000);
+    }
+    // 调用倒计时函数
+    startCountdown();
+</script>
+</body>
+</html>
