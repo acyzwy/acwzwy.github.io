@@ -1,106 +1,51 @@
 <!doctype html>
-<html lang="zh-cn">
+<html lang="zh-CN">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="">
-        <title>宇宙无垠の网站库</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0;">
+        <title>宇宙无垠</title>
+        <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="index_index.css">
         <style>
-        .container {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			align-items: center;
-			padding: 30px;
-			max-width: 1200px; /* 设置最大宽度 */
-			margin: 0 auto; /* 居中 */
-		}
-		.box {
-			background-color: #fff;
-			border-radius: 5px;
-			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-			margin: 20px;
-			padding: 20px;
-			width: 300px;
-			height: 150px;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			cursor: pointer;
-			transition: all 0.3s ease-in-out;
-		}
-		.box:hover {
-			transform: translateY(-5px);
-			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-		}
-		.box img {
-			height: 60px;
-			margin-bottom: 10px;
-		}
-		.box h1 {
-			font-size: 25px;
-			font-weight: bold;
-			text-align: center;
-			margin: 0;
-		}
-		.box p {
-		    color: #878888;
-		    font-size: 15px;
-		}
-		/* 响应式设计 */
-		@media (max-width: 768px) {
-			.container {
-				padding: 20px;
-			}
-			.box {
-				width: 100%;
-				height: auto;
-			}
-		}</style>
+        @font-face {
+             font-family: myfont1;
+             src: url(myfont.ttf);
+        }
+        @font-face {
+             font-family: myfont2;
+             src: url(myfont2.ttf);
+        }
+        * {
+             margin: 0;
+             padding: 0;
+             box-sizing: border-box;
+        }
+        a {
+             text-decoration: none;
+        }
+        </style>
     </head>
     <body>
-        <a href="https://acyzwy.github.io/index.html/" style="font-size:24px;text-decoration:none;background-image:linear-gradient(90deg,#ff0000 0,#02A7DA);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;">宇宙无垠</a>
-        <hr>
-        <div class="container">
-            <h2 id="tool">工具</h2> <div class="box" onclick="window.open('https://acyzwy.github.io/index.html/wzry.html', '_blank')">
-                <img src="https://pvp.qq.com/favicon.ico" alt="">
-                <h1>王者荣耀英雄攻略</h1>
-                <p>王者荣耀英雄的攻略，api资源，可能有误</p>
-                <!--<p style="color:red">出现问题</p>-->
-            </div>
-            <div class="box" onclick="window.open('https://www.arealme.com/cn', '_blank')"><img src="https://www.arealme.com/fav.ico" alt="">
-                <h1>A Real Me</h1>
-                <p>有趣的多元化测试</p>
-            </div>
-            <h2 id="game">游戏</h2>
-            <div class="box" onclick="window.open('https://acyzwy.github.io/index.html/2048.html', '_blank')"><img src="https://2048game.com/favicon.ico" alt="">
-                <h1>2048</h1>
-                <p>2048小游戏</p>
-            </div>
-            <div class="box" onclick="window.open('http://www.1000mines.com/', '_blank')"><img src="https://img1.baidu.com/it/u=3834990361,2160632913&fm=253" alt="">
-                <h1>无限扫雷</h1>
-                <p>无限扫雷，摸鱼必备</p>
-            </div>
-            <div class="box" onclick="window.open('https://2020game.io/', '_blank')"><img src="https://2020game.io/logo/favicon.ico" alt="">
-                <h1>2020 game</h1>
-                <p>一个回顾2020年的小游戏</p>
-            </div>
-            <div class="box" onclick="window.open('https://kiomet.com', '_blank')"><img src="https://img.ywyj.cn/fcf97320-30f6-4f5e-96bd-ae43a7b475ef" alt="">
-                <h1>Kiomet</h1>
-                <p>一款实时战略游戏，可以通过占领塔来扩张领土</p>
-            </div>
-            <div class="box" onclick="window.open('https://cf.phicommunity.com.cn', '_blank')"><img src="https://img0.baidu.com/it/u=1353296566,3167947781&amp;fm=253" alt="">
-                <h1>Phicommunity</h1>
-                <p>一个具有phigros玩法的网页无广告音游</p>
-            </div>
+        <main><img src="logo.png" alt="">
+            <h3>宇宙无垠</h3>
+        </main>
+        <div class="jianjie">
+            <p>੭ ᐕ)੭*⁾⁾</p>
         </div>
-        <hr>
-        <div id="hitokoto"></div>
-        <p style="text-align:center;">本站已正常运行 <span id="uptime"></span></p>
-        <script>
+        <div class="info">
+            <p style="color:#878888;">我们的征途是星辰大海，我们的探索永无止境！</p>
+        </div>
+        <header><img src="lieche.jpg" class="logo" alt="">
+        </header> <br>
+        <section>
+            <p>⚡<a href="blog.html" style="color:#42A5F5;"> 博客 </a>⚡</p>
+            <p>⚡<a href="wzk.html" style="color:#42A5F5;"> 网站库 </a>⚡</p>
+            <footer>
+                <div style="font-size:12px;">
+                    <div id="hitokoto" style="font-family: myfont2;font-weight: bold;font-style: italic;"></div>
+                    <p style="text-align:center;">本站已正常运行 <span id="uptime"></span></p>
+                    <script>
 		function updateUptime() {
 		  var startTime = new Date("2023-04-29T14:35:36Z"); // 网站启动时间
 		  var now = new Date();
@@ -112,8 +57,8 @@
 		  document.getElementById("uptime").innerHTML = days + "天" + hours + "时" + minutes + "分" + seconds + "秒";
 		}
 		setInterval(updateUptime, 1000);
-	        </script><!--<br><span style="font-size:5px;">v2.5.1</span>-->
-        <script>
+	                </script>
+                    <script>
 		// 使用 fetch 获取随机话语
 		fetch('https://v1.hitokoto.cn/')
 			.then(response => response.json())
@@ -125,5 +70,8 @@
 				console.error(error);
 			});
 	        </script>
+                </div>
+            </footer>
+        </section>
     </body>
 </html>
