@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="">
+        <title>宇宙无垠の网站库</title>
+        <style>
+        .container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			padding: 30px;
+			max-width: 1200px; /* 设置最大宽度 */
+			margin: 0 auto; /* 居中 */
+		}
+		.box {
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+			margin: 20px;
+			padding: 20px;
+			width: 300px;
+			height: 150px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			transition: all 0.3s ease-in-out;
+		}
+		.box:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+		}
+		.box img {
+			height: 60px;
+			margin-bottom: 10px;
+		}
+		.box h1 {
+			font-size: 25px;
+			font-weight: bold;
+			text-align: center;
+			margin: 0;
+		}
+		.box p {
+		    color: #878888;
+		    font-size: 15px;
+		}
+		/* 响应式设计 */
+		@media (max-width: 768px) {
+			.container {
+				padding: 20px;
+			}
+			.box {
+				width: 100%;
+				height: auto;
+			}
+		}</style>
+    </head>
+    <body>
+        <a href="https://acyzwy.github.io/index.html/" style="font-size:24px;text-decoration:none;background-image:linear-gradient(90deg,#ff0000 0,#02A7DA);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;">宇宙无垠</a>
+        <hr>
+        <div class="container">
+            <!--<h2 id="tool">工具</h2>--> <div class="box" onclick="window.open('https://acyzwy.github.io/index.html/wzry.html', '_blank')">
+                <img src="https://pvp.qq.com/favicon.ico" alt="">
+                <h1>王者荣耀英雄攻略</h1>
+                <p>王者荣耀英雄的攻略，api资源，可能有误</p>
+                <!--<p style="color:red">出现问题</p>-->
+            </div>
+            <div class="box" onclick="window.open('https://www.arealme.com/cn', '_blank')"><img src="https://www.arealme.com/fav.ico" alt="">
+                <h1>A Real Me</h1>
+                <p>有趣的多元化测试</p>
+            </div>
+            <!--<h2 id="game">游戏</h2>-->
+            <div class="box" onclick="window.open('https://acyzwy.github.io/index.html/2048.html', '_blank')"><img src="https://2048game.com/favicon.ico" alt="">
+                <h1>2048</h1>
+                <p>2048小游戏</p>
+            </div>
+            <div class="box" onclick="window.open('http://www.1000mines.com/', '_blank')"><img src="https://img1.baidu.com/it/u=3834990361,2160632913&fm=253" alt="">
+                <h1>无限扫雷</h1>
+                <p>无限扫雷，摸鱼必备</p>
+            </div>
+            <div class="box" onclick="window.open('https://2020game.io/', '_blank')"><img src="https://2020game.io/logo/favicon.ico" alt="">
+                <h1>2020 game</h1>
+                <p>一个回顾2020年的小游戏</p>
+            </div>
+            <div class="box" onclick="window.open('https://kiomet.com', '_blank')"><img src="https://img.ywyj.cn/fcf97320-30f6-4f5e-96bd-ae43a7b475ef" alt="">
+                <h1>Kiomet</h1>
+                <p>一款实时战略游戏，可以通过占领塔来扩张领土</p>
+            </div>
+            <div class="box" onclick="window.open('https://cf.phicommunity.com.cn', '_blank')"><img src="https://img0.baidu.com/it/u=1353296566,3167947781&amp;fm=253" alt="">
+                <h1>Phicommunity</h1>
+                <p>一个具有phigros玩法的网页无广告音游</p>
+            </div>
+        </div>
+        <hr>
+        <div id="hitokoto" style="text-align:center;"></div>
+        <p style="text-align:center;">本站已正常运行 <span id="uptime"></span></p>
+        <script>
+		function updateUptime() {
+		  var startTime = new Date("2023-04-29T14:35:36Z"); // 网站启动时间
+		  var now = new Date();
+		  var uptime = now - startTime;
+		  var days = Math.floor(uptime / (1000 * 60 * 60 * 24));
+		  var hours = Math.floor((uptime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		  var minutes = Math.floor((uptime % (1000 * 60 * 60)) / (1000 * 60));
+		  var seconds = Math.floor((uptime % (1000 * 60)) / 1000);
+		  document.getElementById("uptime").innerHTML = days + "天" + hours + "时" + minutes + "分" + seconds + "秒";
+		}
+		setInterval(updateUptime, 1000);
+	        </script><!--<br><span style="font-size:5px;">v2.5.1</span>-->
+        <script>
+		// 使用 fetch 获取随机话语
+		fetch('https://v1.hitokoto.cn/')
+			.then(response => response.json())
+			.then(data => {
+				const hitokoto = document.getElementById('hitokoto');
+				hitokoto.innerHTML = data.hitokoto + ' ——《' + data.from + '》';
+			})
+			.catch(error => {
+				console.error(error);
+			});
+	        </script>
+    </body>
+</html>
